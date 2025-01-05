@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gambar {
+  height: 403px;
+}
+
+.gambar-md {
+  height: 303px;
+}
+
+.gambar-about {
+  width: 370px;
+}
+
+.kanan {
+  padding-right: -10px;
+}
+
+.batas {
+  max-width: 600px;
+}
+
+.menu-text-mobile {
+  @apply text-gray-400 px-6 py-1 font-medium block;
+}
+
+.card-dark {
+  @apply dark:bg-slate-900 dark:hover:shadow-white dark:border-none dark:text-white;
+}
+
+.panjang {
+  width: 700px;
+}
+
+.dark-gambar {
+  @apply shadow-md hover:dark:shadow-slate-500;
+}
+
+.lagi {
+  width: 800px;
+}
+
+.footer {
+  width: 100vh;
+}
+
+.about-md {
+  @apply md:flex md:flex-col md:mt-5 max-sm:flex-col;
+}
+
+.gambar-efek {
+  @apply md:items-center md:flex-row md:justify-between max-sm:flex max-sm:flex-row  max-sm:items-center max-sm:mt-5 max-sm:justify-evenly;
+}
+
+.neon {
+  @apply max-sm:relative max-sm:w-28 max-sm:right-0 max-sm:bottom-0 max-sm:mt-3;
+}

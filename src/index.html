@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-blue-600 py-4 px-4 dark:bg-slate-900  dark:py-4 dark:px-4 transition-colors duration-300 relative"
+        id="home">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl text-white font-serif mr-auto">Brand</h1>
+            <nav class="text-gray-100 font-medium text-base gap-3 hidden md:flex ">
+                <a class="ml-6" href="#home">Home</a>
+                <a class="ml-6" href="#menu">Menu</a>
+                <a class="ml-6" href="#about">About</a>
+                <a class="ml-6" href="#alamat">Address</a>
+            </nav>
+
+            <button class="ml-8 relative">
+                <i class="fa-solid fa-cart-shopping text-white text-xl"></i>
+                <div class="bg-orange-400 font-bold rounded-full text-xs absolute px-2 -top-3 -right-3 text-white">3
+                </div>
+            </button>
+            <button class="ml-8 md:hidden" onclick="toogle()">
+                <i class="fa-solid fa-bars text-white text-xl"></i>
+            </button>
+            <button class="ml-8" onclick="dark()">
+                <i class="fa-solid fa-moon text-white text-xl"></i>
+            </button>
+        </div>
+        <!-- untuk mobile  -->
+        <nav class="text-base gap-3 bg-white py-4 mt-4 hidden" id="menuMobile">
+            <a class="menu-text-mobile" href="#home">Home</a>
+            <a class="menu-text-mobile" href="#menu">Menu</a>
+            <a class="menu-text-mobile" href="#about">About</a>
+            <a class="menu-text-mobile" href="#kontak">Contact</a>
+        </nav>
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center pt-36 pb-20 px-8">
+            <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                <h2 class="text-white dark:text-orange-600 max-md:text-2xl text-5xl font-bold mb-4 max-sm:text-4xl">
+                    Welcome to our stores
+                </h2>
+                <p class="text-white/90 md:text-lg text-xl max-sm:text-xl">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.</p>
+                <a class="mt-10 max-w-fit bg-white md:mt-6 max-sm:mt-3 md:px-4 px-6 py-2 rounded-full font-semibold text-blue-400 hover:text-red-500 hover:shadow-lg"
+                    href="#">Start Shopping</a>
+            </div>
+            <img class="h-96 md:h-72 mt-10 md:mt-0 max-sm:mt-3" src="undraw_mobile-content_yz21.svg"
+                alt="ilustrasi">
+        </div>
+        <div
+            class="hidden dark:block absolute bottom-0 left-0 w-full h-12 bg-gradient-to-b from-slate-900 to-slate-950 transition-opacity duration-500 delay-[3000ms] opacity-0 dark:opacity-100">
+        </div>
+    </header>
+
+    <section class="dark:bg-slate-950 transition-colors duration-300" id="menu">
+        <div class="container mx-auto pt-32 pb-20 pl-8 pr-8">
+            <h1 class="text-4xl pb-4 dark:text-orange-600">Our Product</h1>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div
+                    class="bg-white p-6 shadow-lg rounded-2xl card-dark border border-gray-100 transform transition-all hover:-translate-y-2 duration-300 hover:shadow-2xl relative">
+                    <img class="rounded-md" src="ikan.png" alt="">
+                    <h3 class="text-xl font-bold">Product 3</h3>
+                    <div class="flex justify-between items-center">
+                        <p class="text-orange-500">Rp. 200.000</p>
+                    </div>
+                    <!-- Icon Cart -->
+                    <a href="#"
+                        class="bg-blue-500 p-2 px-3 rounded-full absolute bottom-4 right-4 hover:bg-green-600 transition-colors duration-200">
+                        <i class="fa-solid fa-cart-shopping text-white text-sm"></i>
+                    </a>
+                </div>
+                <div
+                    class="bg-white p-6 shadow-lg rounded-2xl card-dark border border-gray-100 transform transition-all hover:-translate-y-2 duration-300 hover:shadow-2xl relative">
+                    <img class="rounded-md" src="ikan.png" alt="">
+                    <h3 class="text-xl font-bold">Product 3</h3>
+                    <div class="flex justify-between items-center">
+                        <p class="text-orange-500">Rp. 200.000</p>
+                    </div>
+                    <!-- Icon Cart -->
+                    <a href="#"
+                        class="bg-blue-500 p-2 px-3 rounded-full absolute bottom-4 right-4 hover:bg-green-600 transition-colors duration-200">
+                        <i class="fa-solid fa-cart-shopping text-white text-sm"></i>
+                    </a>
+                </div>
+                <div
+                    class="bg-white p-6 shadow-lg rounded-2xl card-dark border border-gray-100 transform transition-all hover:-translate-y-2 duration-300 hover:shadow-2xl relative">
+                    <img class="rounded-md" src="ikan.png" alt="">
+                    <h3 class="text-xl font-bold">Product 3</h3>
+                    <div class="flex justify-between items-center">
+                        <p class="text-orange-500">Rp. 200.000</p>
+                    </div>
+                    <!-- Icon Cart -->
+                    <a href="#"
+                        class="bg-blue-500 p-2 px-3 rounded-full absolute bottom-4 right-4 hover:bg-green-600 transition-colors duration-200">
+                        <i class="fa-solid fa-cart-shopping text-white text-sm"></i>
+                    </a>
+                </div>
+                <div
+                    class="bg-white p-6 shadow-lg rounded-2xl card-dark border border-gray-100 transform transition-all hover:-translate-y-2 duration-300 hover:shadow-2xl relative">
+                    <img class="rounded-md" src="ikan.png" alt="">
+                    <h3 class="text-xl font-bold">Product 3</h3>
+                    <div class="flex justify-between items-center">
+                        <p class="text-orange-500">Rp. 200.000</p>
+                    </div>
+                    <!-- Icon Cart -->
+                    <a href="#"
+                        class="bg-blue-500 p-2 px-3 rounded-full absolute bottom-4 right-4 hover:bg-green-600 transition-colors duration-200">
+                        <i class="fa-solid fa-cart-shopping text-white text-sm"></i>
+                    </a>
+                </div>
+                <div
+                    class="bg-white p-6 shadow-lg rounded-2xl card-dark border border-gray-100 transform transition-all hover:-translate-y-2 duration-300 hover:shadow-2xl relative">
+                    <img class="rounded-md" src="ikan.png" alt="">
+                    <h3 class="text-xl font-bold">Product 3</h3>
+                    <div class="flex justify-between items-center">
+                        <p class="text-orange-500">Rp. 200.000</p>
+                    </div>
+                    <!-- Icon Cart -->
+                    <a href="#"
+                        class="bg-blue-500 p-2 px-3 rounded-full absolute bottom-4 right-4 hover:bg-green-600 transition-colors duration-200">
+                        <i class="fa-solid fa-cart-shopping text-white text-sm"></i>
+                    </a>
+                </div>
+                <div
+                    class="bg-white p-6 shadow-lg rounded-2xl card-dark border border-gray-100 transform transition-all hover:-translate-y-2 duration-300 hover:shadow-2xl relative">
+                    <img class="rounded-md" src="ikan.png" alt="">
+                    <h3 class="text-xl font-bold dark:text-white">Product 3</h3>
+                    <div class="flex justify-between items-center">
+                        <p class="text-orange-500">Rp. 200.000</p>
+                    </div>
+                    <!-- Icon Cart -->
+                    <a href="#"
+                        class="bg-blue-500 p-2 px-3 rounded-full absolute bottom-4 right-4 hover:bg-green-600 transition-colors duration-200">
+                        <i class="fa-solid fa-cart-shopping text-white text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="dark:bg-slate-950">
+        <div class="container mx-auto pt-32 pb-20 px-8">
+            <div class="flex flex-col items-center text-center px-10 mb-0">
+                <h1 class="text-5xl font-semibold dark:text-orange-600 md:text-3xl max-sm:text-3xl">What Is Brand ?</h1>
+                <p class="text-2xl mt-4 dark:text-white/90 md:text-xl max-sm:text-sm">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, aut. Ea consectetur molestias modi
+                    beatae esse voluptatem doloribus nostrum sequi!
+                </p>
+            </div>
+            <div class="mt-20 flex flex-row justify-between items-center about-md max-sm:mt-0">
+                <div class="flex flex-col w-96 relative gambar-efek">
+                    <img src="aquarium.jpg"
+                        class="dark-gambar w-72 md:w-36 max-sm:w-28 rounded-xl shadow shadow-black transition-all duration-500 hover:translate-y-2 hover:scale-105 hover:z-20"
+                        alt="Aquarium" />
+                    <img src="neon.jpg"
+                        class="dark-gambar absolute md:relative w-64 md:w-44 md:mt-3 md:right-0 md:bottom-0 -right-14 -bottom-12 rounded-xl shadow shadow-gray-950 transition-transform duration-500 hover:scale-110 hover:z-30 neon"
+                        alt="Neon" />
+                </div>
+                <p
+                    class="text-2xl md:text-xl max-sm:text-sm md:mt-10 max-sm:mt-5 max-sm:mx-auto max-w-full text-center dark:text-white/90">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, distinctio, doloribus
+                    molestiae ipsam totam ad tempora facere impedit dolorem quam ea fuga iste provident amet
+                    voluptatibus animi omnis nemo incidunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut
+                    ducimus molestiae officiis molestias sit ex ipsa voluptates cupiditate similique accusantium?
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="alamat" class="dark:bg-slate-950">
+        <div class="container mx-auto pt-32 pb-20 px-8">
+            <div class="flex flex-col items-center text-center px-10">
+                <h1 class="font-bold text-5xl max-sm:text-3xl md:text-3xl dark:text-orange-600">See You Guys!!</h1>
+                <p class="text-2xl md:text-xl max-sm:text-sm my-4 dark:text-white/90">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi a id et, dolores enim aspernatur
+                    facere qui!
+                </p>
+            </div>
+            <div class="flex items-center justify-center mt-4 pt-7">
+                <iframe class="lagi rounded-xl"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254832.50533447953!2d98.50467788642061!3d3.6426141429003196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303131cc1c3eb2fd%3A0x23d431c8a6908262!2sMedan%2C%20Kota%20Medan%2C%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1735557422180!5m2!1sid!2sid"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="pt-6 text-white bg-blue-500 dark:bg-slate-900">
+        <div class="container mx-auto px-8">
+            <div class="flex flex-row justify-center space-x-6 mb-4">
+                <a href="#"><i class="fa-brands fa-instagram text-3xl"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in text-3xl"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook text-3xl"></i></a>
+            </div>
+            <hr class="border-t border-white/20 mb-4 w-48 mx-auto">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a class="text-xl" href="#home">Home</a>
+                <a class="text-xl" href="#menu">Menu</a>
+                <a class="text-xl" href="#about">About</a>
+                <a class="text-xl" href="#alamat">Address</a>
+            </div>
+            <p class="text-center text-md"> &copy; 2025.
+                <a href="#home"
+                    class="font-extrabold text-white/90 dark:text-orange-500 hover:underline hover:text-white/90">
+                    ProjectTailwindDzakwan.
+                </a>
+            </p>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const html = document.querySelector("html");
+            const btnIcon = document.querySelector("button[onclick='dark()'] i");
+
+            // Cek atau set default theme
+            let theme = localStorage.getItem("theme");
+            if (!theme) {
+                // Jika tidak ada theme di localStorage, set ke 'light'
+                localStorage.setItem("theme", "light");
+                theme = "light";
+            }
+
+            // Terapkan theme
+            if (theme === "dark") {
+                html.classList.add("dark");
+                btnIcon.classList.remove("fa-moon");
+                btnIcon.classList.add("fa-sun");
+            } else {
+                html.classList.remove("dark");
+                btnIcon.classList.remove("fa-sun");
+                btnIcon.classList.add("fa-moon");
+            }
+        });
+
+
+        function toogle() {
+            const elemen = document.getElementById("menuMobile");
+            elemen.classList.toggle("hidden");
+        }
+
+        function dark() {
+            const html = document.querySelector("html");
+            const isDark = html.classList.toggle("dark");
+
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+
+            const btnIcon = document.querySelector("button[onclick='dark()'] i");
+            if (isDark) {
+                btnIcon.classList.remove("fa-moon");
+                btnIcon.classList.add("fa-sun");
+            } else {
+                btnIcon.classList.remove("fa-sun");
+                btnIcon.classList.add("fa-moon");
+            }
+        }
+    </script>
+</body>
+
+</html>
